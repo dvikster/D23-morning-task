@@ -33,13 +33,14 @@ $(document).ready(function () {
             i++; //only for me
             var toactDiv = document.createElement('div');
             toactDiv.className = 'toast id' + i;
-            toactDiv.innerHTML = myText;
+            toactDiv.innerHTML = myText + i;
             $("#toast-container").append(toactDiv);
+            // $('.toast').slideUp(1000);
 
-            setTimeout(function () {
-                // $('.toast').eq(0).hide(1000);
-                $('.toast').eq(0).remove();
-            }, timer);
+
+            setTimeout(function () {$('.toast').eq(0).remove();}, timer);
+
+
 
 
             var toact = $('.toast');
@@ -47,7 +48,6 @@ $(document).ready(function () {
             toact.css('background',color);
             toact.css('display', 'block');
 
-            // setTimeout(function(){toact.hide(2000);}, timer);
         }
     };
 
